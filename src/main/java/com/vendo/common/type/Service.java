@@ -1,4 +1,4 @@
-package com.vendo.common;
+package com.vendo.common.type;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
