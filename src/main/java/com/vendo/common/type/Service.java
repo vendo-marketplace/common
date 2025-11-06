@@ -8,6 +8,8 @@ import lombok.Getter;
 public enum Service {
 
     USER_SERVICE("user-service"),
+    NOTIFICATION_SERVICE("notification-service"),
+    PRODUCT_SERVICE("product-service"),
     REGISTRY_SERVICE("registry-service");
 
     private final String name;
