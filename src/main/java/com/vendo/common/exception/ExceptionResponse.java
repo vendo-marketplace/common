@@ -1,21 +1,25 @@
 package com.vendo.common.exception;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
-import lombok.Builder;
-import lombok.NonNull;
+import lombok.*;
 
+import java.time.Instant;
 import java.util.Map;
 
+@Data
 @Builder
-public record ExceptionResponse(
+public class ExceptionResponse {
+
         @NonNull
-        String message,
+        private String message;
 
         @JsonInclude(JsonInclude.Include.NON_NULL)
-        Map<String, String> errors,
+        private Map<String, String> errors;
 
-        int code,
-        String path) {
+        private int code;
+        private String path;
+        private final Instant timestamp = Instant.now();
+
 }
 
 
