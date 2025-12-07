@@ -7,6 +7,7 @@ import lombok.Getter;
 @AllArgsConstructor
 public enum TokenClaim {
 
+    USER_ID_CLAIM("sub"),
     ROLES_CLAIM("roles"),
     STATUS_CLAIM("status");
 
