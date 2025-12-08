@@ -8,6 +8,8 @@ import java.util.Map;
 
 @Data
 @Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class ExceptionResponse {
 
         @NonNull
