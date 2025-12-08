@@ -8,6 +8,7 @@ import lombok.Getter;
 public enum TokenClaim {
 
     USER_ID_CLAIM("sub"),
+    EMAIL_VERIFIED_CLAIM("email_verified"),
     ROLES_CLAIM("roles"),
     STATUS_CLAIM("status");
 
