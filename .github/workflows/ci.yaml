@@ -20,4 +20,4 @@ jobs:
           cache: maven
 
       - name: Run tests
-        run: mvn -B clean verify -DskipITs=false
+        run: mvn -B clean verify -DskipITs=false -Dgpg.skip=true
