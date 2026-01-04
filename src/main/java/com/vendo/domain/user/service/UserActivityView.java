@@ -6,6 +6,6 @@ public interface UserActivityView {
 
     UserStatus getStatus();
 
-    boolean isEmailVerified();
+    Boolean isEmailVerified();
 
 }

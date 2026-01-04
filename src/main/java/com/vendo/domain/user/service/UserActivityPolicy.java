@@ -8,6 +8,10 @@ import com.vendo.security.common.exception.UserIsUnactiveException;
 public final class UserActivityPolicy {
 
     public static void validateActivity(UserActivityView userActivityView) {
+        if (userActivityView.getStatus() == null || userActivityView.isEmailVerified() == null) {
+            throw new IllegalArgumentException("UserStatus or EmailVerified fields must not be null.");
+        }
+
         if (userActivityView.getStatus() == UserStatus.BLOCKED) {
             throw new UserBlockedException("User is blocked.");
         }
