@@ -19,7 +19,7 @@ public class UserActivityViewImpl implements UserActivityView {
     }
 
     @Override
-    public Boolean isEmailVerified() {
+    public Boolean getEmailVerified() {
         return emailVerified;
     }
 

@@ -8,7 +8,7 @@ import com.vendo.security.common.exception.UserIsUnactiveException;
 public final class UserActivityPolicy {
 
     public static void validateActivity(UserActivityView userActivityView) {
-        if (userActivityView.getStatus() == null || userActivityView.isEmailVerified() == null) {
+        if (userActivityView.getStatus() == null || userActivityView.getEmailVerified() == null) {
             throw new IllegalArgumentException("UserStatus or EmailVerified fields must not be null.");
         }
 
@@ -16,7 +16,7 @@ public final class UserActivityPolicy {
             throw new UserBlockedException("User is blocked.");
         }
 
-        if (!userActivityView.isEmailVerified()) {
+        if (!userActivityView.getEmailVerified()) {
             throw new UserEmailNotVerifiedException("User email is not verified.");
         }
 
