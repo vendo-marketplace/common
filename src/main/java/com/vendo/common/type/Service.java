@@ -9,6 +9,7 @@ public enum Service {
 
     USER_SERVICE("user-service"),
     PRODUCT_SERVICE("product-service"),
+    AUTH_SERVICE("auth-service"),
     REGISTRY_SERVICE("registry-service");
 
     private final String name;
